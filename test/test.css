@@ -1,0 +1,251 @@
+@charset "utf-8";
+:root {
+    --color1: #CCCCFF55;
+    --color2: #6495ED55;
+    --color3: #40E0D055;
+    --color4: #9FE2BF55;
+    --color5: #DE316355;
+    --color6: #FF7F5055;
+    --color7: #FFBF0055;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width:100%;
+    height:100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 75px;
+    padding: 1rem;
+    color: black;
+    background: #FA6E6E;
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
+    font-family: cursive;
+
+}
+
+a{text-decoration: none;
+    color:black;
+    padding-bottom: 30px;
+    ;
+}
+a:hover{
+    color: gray
+}
+
+.git{
+    height: 50px;
+    width: 50px;
+}
+
+body {
+    padding-top: 75px;
+}
+
+
+.left-side{
+    line-height: 400px;
+}
+
+.snowman {
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    vertical-align: middle;
+}
+
+h2, h3{
+    margin: 2em;
+}
+
+span{
+    cursor: pointer;
+    padding: 15px;
+}
+
+span:hover{
+    color:darkgray;
+}
+
+.wrapper{
+    width:100%;
+    height:100%;
+}
+
+.left-side, .right-side, .svg, .cube{
+    clear: none;
+    float:left;
+    width: 50%;
+    height: 400px;
+    box-sizing: border-box;
+    background-color: #e5f0f9;
+    text-align: center;
+    item-align: center;
+}
+
+.left-side:hover, .right-side:hover, .cube:hover, .svg:hover
+{
+    background-color: white;
+}
+.content:hover{
+    background-color: #e5f0f9
+}
+
+ .content{
+    width:100%;
+    height:500px;
+    float:left;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+
+.mysay{
+    padding: 25px;
+    list-style:none;
+}
+
+
+ul, ol, h3, h2{
+    text-align: center;
+}
+
+
+
+/* 새로고침해서 확인해주세요... 밑에 위치하게해서 정말 죄송합니다.*/
+.svg{
+    padding-top: 150px;
+}
+svg {
+    animation: fill 0.5s linear forwards 3.4s;
+}
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: var(--color2);
+    }
+}
+svg path {
+    stroke: blue;
+    stroke-width: 3;
+    animation: stroke 1s linear forwards;
+}
+@keyframes stroke {
+    to {
+        stroke-dashoffset: 0;
+    }
+    100%{
+        fill: skyblue;
+    }
+}
+svg path:nth-child(1) {
+    stroke-dasharray: 605px;
+    stroke-dashoffset: 605px;
+}
+
+
+
+
+
+@media all and (max-width: 640px) {
+
+    .left-side, .right-side {
+        float: left;
+        width: 100%;
+        height: 100%;
+    }
+
+    .svg, .cube, .content{
+        width:100%;
+        height:500px;
+        float:left;
+        box-sizing: border-box;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper2 {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-play-state: paused;
+    transform-style: preserve-3d;
+    animation-play-state: paused;
+}
+
+.wrapper2:hover{
+    animation: ani 10s linear infinite;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+@keyframes ani {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(1turn);
+    }
+}
+
+.wrapper2 div {
+    width: 100%;
+    height: 100%;
+    background-color: #d0d0d0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: .2em;
+}
+
+.wrapper2 .left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.wrapper2 .right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+.wrapper2 .front {
+    transform: translateZ(100px);
+}
+.wrapper2 .back {
+    transform: rotateY(0.5turn) translateZ(100px);
+}
